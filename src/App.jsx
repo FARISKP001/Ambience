@@ -258,35 +258,33 @@ export default function Example() {
       <p className="text-gray-300">
         {" "}
         <a href="tel:+971564675774" className="underline hover:text-white">
-          +971 56 467 5774
+          +971 564675774 , 
         </a>
-      </p>
-      <p className="text-gray-300">
-        {" "}
         <a href="tel:+971558045905" className="underline hover:text-white">
-          +971 55 804 5905
+          +971 558045905
         </a>
       </p>
+     
     </div>
 
     {/* Email */}
     <div>
       <h3 className="text-lg font-semibold mb-3 flex items-center justify-center md:justify-start gap-2">
         <FaEnvelope className="text-gray-300" /> 
-      </h3>
-      <p className="text-gray-300">
+        <p className="text-gray-300">
         <a href="mailto:hr@ambience.ae" className="underline hover:text-white">
           hr@ambience.ae
         </a>
       </p>
+      </h3>
+      
     </div>
 
     {/* WhatsApp */}
     <div>
       <h3 className="text-lg font-semibold mb-3 flex items-center justify-center md:justify-start gap-2">
         <FaWhatsapp className="text-gray-300" /> 
-      </h3>
-      <p>
+        <p>
         <a
           href="https://wa.me/+971558045905"
           target="_blank"
@@ -296,6 +294,8 @@ export default function Example() {
           Message Us
         </a>
       </p>
+      </h3>
+      
     </div>
   </div>
 </section>
