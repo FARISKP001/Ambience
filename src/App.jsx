@@ -272,8 +272,8 @@ export default function Example() {
       <h3 className="text-lg font-semibold mb-3 flex items-center justify-center md:justify-start gap-2">
         <FaEnvelope className="text-gray-300" /> 
         <p className="text-gray-300">
-        <a href="mailto:hr@ambience.ae" className="underline hover:text-white">
-          hr@ambience.ae
+        <a href="mailto:ambiencegeneralfoods@gmail.com" className="underline hover:text-white">
+          Email us
         </a>
       </p>
       </h3>
