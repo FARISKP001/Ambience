@@ -2,13 +2,14 @@ import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import main from './assets/main.jpg'
-import FrozenMeat from './assets/Frozen Meat.jpg'
-import Chocolates from './assets/chocolates.jpg'
-import Grains from './assets/Grains.jpg'
-import Nuts from './assets/Nuts.jpg'
-import vegs from './assets/vegs.jpg'
-import coc from './assets/coc.jpg'
+import FrozenMeat from './assets/Frozen Meat.webp'
+import Chocolates from './assets/chocolate.webp'
+import Grains from './assets/Grains.webp'
+import Nuts from './assets/Nuts.webp'
+import vegs from './assets/vegs.webp'
+import coc from './assets/coc.webp'
 
 const navigation = [
   { name: 'Home', href: '#home' }, 
@@ -24,7 +25,7 @@ export default function Example() {
   return (
     <div className="bg-white dark:bg-gray-900">
       {/* === Header === */}
-     <header className="fixed top-0 left-0 w-full h-14 bg-[#e6f7ec] dark:bg-[#203325] shadow-sm flex items-center justify-between px-4 sm:px-6 z-50">
+     <header className="fixed top-0 left-0 w-full h-14 bg-[#ffdab9] dark:bg-[#203325] shadow-sm flex items-center justify-between px-4 sm:px-6 z-50">
         {/* Stylish Company Name */}
         <div className="flex items-center">
           <span className="text-2xl font-extrabold tracking-wide 
@@ -106,7 +107,7 @@ export default function Example() {
       {/* === Hero Section === */}
 <div id="home" className="relative isolate px-0 pt-0">
   <div className="relative h-[32rem] sm:h-[40rem] lg:h-[44rem]">
-    <img src={main} alt="Ambience Trading" className="absolute inset-0 h-full w-full object-cover" />
+   <LazyLoadImage src={main} alt="Ambience Trading" className="absolute inset-0 h-full w-full object-cover" />
     <div className="absolute inset-0 bg-black/40" />
     <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-6">
       <h1 className="text-4xl sm:text-6xl font-bold text-white drop-shadow-lg">
@@ -127,7 +128,7 @@ export default function Example() {
 
       {/* === Products === */}
       <section
-  id="products"
+  id="products" aria-label="Our Products"
   className="relative bg-[#9ab973] dark:bg-[#203325] pt-10 pb-16 scroll-mt-16 -mt-px border-t border-transparent"
 >
 
@@ -144,7 +145,7 @@ export default function Example() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {/* 1 */}
             <div className="overflow-hidden rounded-xl border border-black/10 dark:border-white/10 shadow-lg bg-white dark:bg-gray-900">
-              <img src={Grains} alt="Grains" className="h-48 w-full object-cover" />
+              <LazyLoadImage src={Grains} alt="Grains" className="h-48 w-full object-cover" />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Grains</h3>
                 <p className="mt-2 text-gray-700 dark:text-gray-400">
@@ -154,7 +155,7 @@ export default function Example() {
             </div>
             {/* 2 */}
             <div className="overflow-hidden rounded-xl border border-black/10 dark:border-white/10 shadow-lg bg-white dark:bg-gray-900">
-              <img src={vegs} alt="Vegetables" className="h-48 w-full object-cover" />
+              <LazyLoadImage src={vegs} alt="Vegetables" className="h-48 w-full object-cover" />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Vegetables</h3>
                 <p className="mt-2 text-gray-700 dark:text-gray-400">
@@ -164,7 +165,7 @@ export default function Example() {
             </div>
             {/* 3 */}
             <div className="overflow-hidden rounded-xl border border-black/10 dark:border-white/10 shadow-lg bg-white dark:bg-gray-900">
-              <img src={FrozenMeat} alt="Frozen Meats" className="h-48 w-full object-cover" />
+              <LazyLoadImage src={FrozenMeat} alt="Frozen Meats" className="h-48 w-full object-cover" />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Frozen Meats</h3>
                 <p className="mt-2 text-gray-700 dark:text-gray-400">
@@ -174,7 +175,7 @@ export default function Example() {
             </div>
             {/* 4 */}
             <div className="overflow-hidden rounded-xl border border-black/10 dark:border-white/10 shadow-lg bg-white dark:bg-gray-900">
-              <img src={Chocolates} alt="Chocolates" className="h-48 w-full object-cover" />
+              <LazyLoadImage src={Chocolates} alt="Chocolates" className="h-48 w-full object-cover" />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Chocolates</h3>
                 <p className="mt-2 text-gray-700 dark:text-gray-400">
@@ -184,7 +185,7 @@ export default function Example() {
             </div>
             {/* 5 */}
             <div className="overflow-hidden rounded-xl border border-black/10 dark:border-white/10 shadow-lg bg-white dark:bg-gray-900">
-              <img src={Nuts} alt="Nuts" className="h-48 w-full object-cover" />
+              <LazyLoadImage src={Nuts} alt="Nuts" className="h-48 w-full object-cover" />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Nuts</h3>
                 <p className="mt-2 text-gray-700 dark:text-gray-400">
@@ -194,7 +195,7 @@ export default function Example() {
             </div>
             {/* 6 */}
             <div className="overflow-hidden rounded-xl border border-black/10 dark:border-white/10 shadow-lg bg-white dark:bg-gray-900">
-              <img src={coc} alt="Soft Drinks" className="h-48 w-full object-cover" />
+              <LazyLoadImage src={coc} alt="Soft Drinks" className="h-48 w-full object-cover" />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Soft Drinks</h3>
                 <p className="mt-2 text-gray-700 dark:text-gray-400">
