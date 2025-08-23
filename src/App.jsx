@@ -241,29 +241,28 @@ export default function Example() {
     {/* Address */}
     <div>
       <h3 className="text-lg font-semibold mb-3 flex items-center justify-center md:justify-start gap-2">
-        <FaMapMarkerAlt className="text-gray-300" /> Address
+        <FaMapMarkerAlt className="text-gray-300" /> 
       </h3>
       <p className="text-gray-300 leading-relaxed">
-        ABU DHABI <br />
-        MUSSAFAH 45 <br />
-        Office no: 45 <br />
-        Building no: 19A
+        MUSSAFAH 45, Office no: 45 <br />
+        Building no: 19A, ABU DHABI <br />
+        
       </p>
     </div>
 
     {/* Phone */}
     <div>
       <h3 className="text-lg font-semibold mb-3 flex items-center justify-center md:justify-start gap-2">
-        <FaPhoneAlt className="text-gray-300" /> Phone
+        <FaPhoneAlt className="text-gray-300" /> 
       </h3>
       <p className="text-gray-300">
-        Mobile:{" "}
+        {" "}
         <a href="tel:+971564675774" className="underline hover:text-white">
           +971 56 467 5774
         </a>
       </p>
       <p className="text-gray-300">
-        Telephone:{" "}
+        {" "}
         <a href="tel:+971558045905" className="underline hover:text-white">
           +971 55 804 5905
         </a>
@@ -273,7 +272,7 @@ export default function Example() {
     {/* Email */}
     <div>
       <h3 className="text-lg font-semibold mb-3 flex items-center justify-center md:justify-start gap-2">
-        <FaEnvelope className="text-gray-300" /> Email
+        <FaEnvelope className="text-gray-300" /> 
       </h3>
       <p className="text-gray-300">
         <a href="mailto:hr@ambience.ae" className="underline hover:text-white">
@@ -285,7 +284,7 @@ export default function Example() {
     {/* WhatsApp */}
     <div>
       <h3 className="text-lg font-semibold mb-3 flex items-center justify-center md:justify-start gap-2">
-        <FaWhatsapp className="text-gray-300" /> WhatsApp
+        <FaWhatsapp className="text-gray-300" /> 
       </h3>
       <p>
         <a
