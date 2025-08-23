@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import main from './assets/main.jpg'
 import FrozenMeat from './assets/Frozen Meat.jpg'
 import Chocolates from './assets/chocolates.jpg'
@@ -10,9 +11,11 @@ import vegs from './assets/vegs.jpg'
 import coc from './assets/coc.jpg'
 
 const navigation = [
+  { name: 'Home', href: '#home' }, 
   { name: 'Products', href: '#products' },
-  { name: 'About Us', href: '#about' }, // <-- new link to footer section
-  
+  { name: 'About', href: '#about' },
+  { name: 'Contact', href: '#contact' },
+
 ]
 
 export default function Example() {
@@ -21,16 +24,15 @@ export default function Example() {
   return (
     <div className="bg-white dark:bg-gray-900">
       {/* === Header === */}
-      <header className="h-14 bg-[#e6f7ec] dark:bg-[#203325] shadow-sm flex items-center justify-between px-4 sm:px-6">
-      
-      {/* Stylish Company Name */}
-      <div className="flex items-center">
-        <span className="text-2xl font-extrabold tracking-wide 
+     <header className="fixed top-0 left-0 w-full h-14 bg-[#e6f7ec] dark:bg-[#203325] shadow-sm flex items-center justify-between px-4 sm:px-6 z-50">
+        {/* Stylish Company Name */}
+        <div className="flex items-center">
+          <span className="text-2xl font-extrabold tracking-wide 
                          bg-gradient-to-r from-green-600 via-emerald-500 to-teal-500 
                          bg-clip-text text-transparent">
-          Ambience
-        </span>
-      </div>
+            Ambience
+          </span>
+        </div>
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
@@ -100,9 +102,9 @@ export default function Example() {
           </DialogPanel>
         </Dialog>
       </header>
-
-      {/* === Hero Section (full bg image) === */}
-<div className="relative isolate px-0 pt-0">
+<div className="pt-14"></div>
+      {/* === Hero Section === */}
+<div id="home" className="relative isolate px-0 pt-0">
   <div className="relative h-[32rem] sm:h-[40rem] lg:h-[44rem]">
     <img src={main} alt="Ambience Trading" className="absolute inset-0 h-full w-full object-cover" />
     <div className="absolute inset-0 bg-black/40" />
@@ -122,11 +124,13 @@ export default function Example() {
     </div>
   </div>
 </div>
+
       {/* === Products === */}
       <section
-        id="products"
-        className="relative bg-[#82C26E] dark:bg-[#203325] pt-10 pb-16 scroll-mt-16 -mt-px border-t border-transparent"
-      >
+  id="products"
+  className="relative bg-[#9ab973] dark:bg-[#203325] pt-10 pb-16 scroll-mt-16 -mt-px border-t border-transparent"
+>
+
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
@@ -202,83 +206,104 @@ export default function Example() {
         </div>
       </section>
 
-      {/* === About Us (Footer) === */}
-      <footer
-        id="about"
-        className="relative bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 border-t border-black/5 dark:border-white/10"
-      >
-        <div className="mx-auto max-w-6xl px-6 lg:px-8 py-16">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Company Card */}
-            <div className="rounded-2xl border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 p-6 backdrop-blur">
-              <h3 className="text-m font-bold text-gray-900 dark:text-white">
-                AMBIENCE GENERAL TRADING
-              </h3>
-             
-              <div className="mt-4 h-px w-12 bg-gray-300 dark:bg-white/20" />
-              <p className="mt-4 text-gray-700 dark:text-gray-300">
-                <span className="font-semibold">ABUDHABI</span>
-                <br />
-                <span className="font-semibold">MUSSAFAH 457894</span>
-                <br />
-                Office no 45
-                <br />
-                Building no : 19A
-              </p>
-            </div>
-
-            {/* Contact Card */}
-            <div className="rounded-2xl border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 p-6 backdrop-blur">
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Contact</h4>
-              <p className="mt-2 text-gray-700 dark:text-gray-300">
-                Mobile:{" "}
-                <a href="tel:71564675774" className="underline hover:text-emerald-600 dark:hover:text-emerald-400">
-                  +971564675774
-                </a>
-                <br />
-                Telephone:{" "}
-                <a href="tel:9545415121" className="underline hover:text-emerald-600 dark:hover:text-emerald-400">
-                  +971558045905
-                </a>
-              </p>
-              <div className="mt-4 flex gap-2">
-                
-                <a
-                  href="https://wa.me/+971558045905"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full border border-gray-300/50 px-3 py-1 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10"
-                >
-                  WhatsApp
-                </a>
-              </div>
-            </div>
-
+      {/* === About Us Section === */}
+      <section
+  id="about"
+  className="relative bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 border-t border-black/5 dark:border-white/10"
+>
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 py-16 text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             
-          </div>
-{/* Disclaimer */}
-        <div>
-          <h2 className="text-lg font-semibold text-white mb-3">Disclaimer</h2>
-          <p className="leading-relaxed italic">
-            Product details and images are for informational purposes only 
-            and subject to change without notice.
+          </h2>
+          <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <span className="font-semibold">AMBIENCE GENERAL TRADING LLC</span> has been a pioneer
+            in the region since 2025 and has been responsible for the supply of food
+            to many supermarkets and tradings in the UAE.
           </p>
-        </div>
-      
-          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-black/10 dark:border-white/10 pt-6 md:flex-row">
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              © {new Date().getFullYear()} Ambience General Trading — Abu Dhabi
+
+          <div className="mt-8 p-6 rounded-2xl border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur inline-block">
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Working Hours</h4>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              <strong>Monday – Saturday:</strong> 8:00 AM – 6:00 PM <br />
+              <strong>Friday:</strong> 8:00 AM – 12:00 PM
             </p>
-            <a
-              href="#"
-              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
-              className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-            >
-              Back to top ↑
-            </a>
           </div>
         </div>
-      </footer>
+      </section>
+{/* === Contact Us (Footer Bar) === */}
+<section
+  id="contact"
+  className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-white py-12"
+>
+  <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-4 px-6 text-center md:text-left">
+    
+    {/* Address */}
+    <div>
+      <h3 className="text-lg font-semibold mb-3 flex items-center justify-center md:justify-start gap-2">
+        <FaMapMarkerAlt className="text-gray-300" /> Address
+      </h3>
+      <p className="text-gray-300 leading-relaxed">
+        ABU DHABI <br />
+        MUSSAFAH 45 <br />
+        Office no: 45 <br />
+        Building no: 19A
+      </p>
+    </div>
+
+    {/* Phone */}
+    <div>
+      <h3 className="text-lg font-semibold mb-3 flex items-center justify-center md:justify-start gap-2">
+        <FaPhoneAlt className="text-gray-300" /> Phone
+      </h3>
+      <p className="text-gray-300">
+        Mobile:{" "}
+        <a href="tel:+971564675774" className="underline hover:text-white">
+          +971 56 467 5774
+        </a>
+      </p>
+      <p className="text-gray-300">
+        Telephone:{" "}
+        <a href="tel:+971558045905" className="underline hover:text-white">
+          +971 55 804 5905
+        </a>
+      </p>
+    </div>
+
+    {/* Email */}
+    <div>
+      <h3 className="text-lg font-semibold mb-3 flex items-center justify-center md:justify-start gap-2">
+        <FaEnvelope className="text-gray-300" /> Email
+      </h3>
+      <p className="text-gray-300">
+        <a href="mailto:hr@ambience.ae" className="underline hover:text-white">
+          hr@ambience.ae
+        </a>
+      </p>
+    </div>
+
+    {/* WhatsApp */}
+    <div>
+      <h3 className="text-lg font-semibold mb-3 flex items-center justify-center md:justify-start gap-2">
+        <FaWhatsapp className="text-gray-300" /> WhatsApp
+      </h3>
+      <p>
+        <a
+          href="https://wa.me/+971558045905"
+          target="_blank"
+          rel="noreferrer"
+          className="underline hover:text-white text-gray-300"
+        >
+          Message Us
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+{/* === Copyright Bar === */}
+<div className="bg-gray-900 text-gray-400 text-center py-4 text-sm border-t border-gray-700">
+  © {new Date().getFullYear()} AMBIENCE GENERAL TRADING LLC — All Rights Reserved.
+</div>
+
     </div>
   )
 }
